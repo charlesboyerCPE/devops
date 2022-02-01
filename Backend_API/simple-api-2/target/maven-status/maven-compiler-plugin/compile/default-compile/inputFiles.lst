@@ -1,0 +1,10 @@
+/home/atma/Cours/4IRC/DevOps/devops/Backend_API/simple-api-2/src/main/java/fr/takima/training/simpleapi/entity/Student.java
+/home/atma/Cours/4IRC/DevOps/devops/Backend_API/simple-api-2/src/main/java/fr/takima/training/simpleapi/dao/StudentDAO.java
+/home/atma/Cours/4IRC/DevOps/devops/Backend_API/simple-api-2/src/main/java/fr/takima/training/simpleapi/SimpleApiApplication.java
+/home/atma/Cours/4IRC/DevOps/devops/Backend_API/simple-api-2/src/main/java/fr/takima/training/simpleapi/service/DepartmentService.java
+/home/atma/Cours/4IRC/DevOps/devops/Backend_API/simple-api-2/src/main/java/fr/takima/training/simpleapi/entity/Department.java
+/home/atma/Cours/4IRC/DevOps/devops/Backend_API/simple-api-2/src/main/java/fr/takima/training/simpleapi/controller/DepartmentController.java
+/home/atma/Cours/4IRC/DevOps/devops/Backend_API/simple-api-2/src/main/java/fr/takima/training/simpleapi/dao/DepartmentDAO.java
+/home/atma/Cours/4IRC/DevOps/devops/Backend_API/simple-api-2/src/main/java/fr/takima/training/simpleapi/service/StudentService.java
+/home/atma/Cours/4IRC/DevOps/devops/Backend_API/simple-api-2/src/main/java/fr/takima/training/simpleapi/controller/GreetingController.java
+/home/atma/Cours/4IRC/DevOps/devops/Backend_API/simple-api-2/src/main/java/fr/takima/training/simpleapi/controller/StudentController.java
