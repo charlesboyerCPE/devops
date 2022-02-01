@@ -18,7 +18,8 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
-      
+
       #finally build your app with the latest command
       - name: Build and test with Maven
+        working-directory: ./Backend_API/simple-api-2
         run: mvn clean verify
