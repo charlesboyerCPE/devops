@@ -40,11 +40,9 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           # relative path to the place where source code with Dockerfile is located
-          context: ./Backend_API/
+          context: ./Backend_API/simple-api-2
           # Note: tags has to be all lower-case
-          tags:
-            ${{secrets.DOCKERHUB_USERNAME}}/tp-devops-cpe:simple-api
+          tags: ${{secrets.DOCKERHUB_USERNAME}}/tp-devops-cpe:simple-api
 
       - name: Build image and push database
-      # DO the same for database
       - name: Build image and push httpd
