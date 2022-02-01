@@ -229,3 +229,5 @@ sudo docker-compose up --build
 
 Eteindre les containers
 sudo docker-compose down
+
+Nous pushons sur le service en ligne pour avoir une sauvegarde. De plus nous pouvons maintenant le modifier sereinement pendant qu'une version fonctionnelle est en production
