@@ -43,7 +43,3 @@ jobs:
           context: ./Backend_API/simple-api-2
           # Note: tags has to be all lower-case
           tags: ${{secrets.DOCKERHUB_USERNAME}}/backend
-
-      - name: Build image and push database
-      - name: Build image and push httpd
-      
