@@ -45,6 +45,13 @@ sudo docker run -d -p 8081:8081 --name db_view --network net adminer
 
 sudo docker run -d --name postgredb -v /data:/var/lib/postgresql/data --network net charlesboyercpe/postgredb
 
+Les commandes les plus importantes sont :
+
+- docker build : Pour construire notre image docker
+  
+- docker run : Pour lancer notre image dans un container
+
+Nous avons aussi besoin d'un fichier Dockerfile, essentiel pour construire notre image
 ---
 
 ## Backend API
@@ -187,6 +194,12 @@ Build et lancement :
 sudo docker build -t charlesboyercpe/httpd .
 sudo docker run -d --name httpd -p 80:80 --network net charlesboyercpe/httpd
 
+---
+
+## Link Application
+
+---
+
 ### Docker Compose
 
 Contenu docker-compose.yml :
@@ -224,10 +237,12 @@ networks:
 
 Commandes réalisées :
 
-Lancer le docker-compose
+Lancer le docker-compose :
 sudo docker-compose up --build
 
-Eteindre les containers
+Eteindre les containers :
 sudo docker-compose down
 
-Nous pushons sur le service en ligne pour avoir une sauvegarde. De plus nous pouvons maintenant le modifier sereinement pendant qu'une version fonctionnelle est en production
+### Publication
+
+Nous pushons sur le repository en ligne pour avoir une sauvegarde. De plus nous pouvons maintenant le modifier sereinement pendant qu'une version fonctionnelle est en production
