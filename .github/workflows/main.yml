@@ -30,6 +30,7 @@ jobs:
 
         # define job to build and publish docker image
   build-and-push-backend:
+    needs: test-backend
     # run only when code is compiling and tests are passing
     runs-on: ubuntu-latest
 
@@ -51,6 +52,7 @@ jobs:
           push: ${{ github.ref == 'refs/heads/main' }}
 
   build-and-push-database:
+    needs: test-backend
     # run only when code is compiling and tests are passing
     runs-on: ubuntu-latest
     steps:
@@ -69,6 +71,7 @@ jobs:
           push: ${{ github.ref == 'refs/heads/main' }}
 
   build-and-push-httpd:
+    needs: test-backend
     # run only when code is compiling and tests are passing
     runs-on: ubuntu-latest
     steps:
