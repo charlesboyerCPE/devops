@@ -29,7 +29,7 @@ jobs:
         run: mvn -B verify sonar:sonar -Dsonar.projectKey=charlesboyerCPE_devops -Dsonar.organization=charlesboyercpe -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{secrets.SONAR_TOKEN }} --file ./pom.xml
 
         # define job to build and publish docker image
-  build-and-push-docker-image:
+  login_docker:
     needs: test-backend
     # run only when code is compiling and tests are passing
     runs-on: ubuntu-latest
@@ -41,7 +41,11 @@ jobs:
 
       - name: Login to DockerHub
         run: docker login -u ${{secrets.DOCKERHUB_USERNAME}} -p ${{secrets.DOCKERHUB_TOKEN}}
-
+  build-and-push-backend:
+    needs: login_docker
+    # run only when code is compiling and tests are passing
+    runs-on: ubuntu-latest
+    steps:
       - name: Build image and push backend
         uses: docker/build-push-action@v2
         with:
@@ -51,6 +55,11 @@ jobs:
           tags: ${{secrets.DOCKERHUB_USERNAME}}/backend
           push: ${{ github.ref == 'refs/heads/main' }}
 
+  build-and-push-database:
+    needs: login_docker
+    # run only when code is compiling and tests are passing
+    runs-on: ubuntu-latest
+    steps:
       - name: Build image and push database
         uses: docker/build-push-action@v2
         with:
@@ -60,6 +69,11 @@ jobs:
           tags: ${{secrets.DOCKERHUB_USERNAME}}/database
           push: ${{ github.ref == 'refs/heads/main' }}
 
+  build-and-push-httpd:
+    needs: login_docker
+    # run only when code is compiling and tests are passing
+    runs-on: ubuntu-latest
+    steps:
       - name: Build image and push httpd
         uses: docker/build-push-action@v2
         with:
