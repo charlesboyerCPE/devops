@@ -1,0 +1,9 @@
+---
+# tasks file for roles/front
+- name: Run frontend
+  docker_container:
+    name: front
+    image: charlesboyercpe/front
+    state: started
+    networks:
+      - name: frontend
